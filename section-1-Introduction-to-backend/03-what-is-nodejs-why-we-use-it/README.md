@@ -38,7 +38,7 @@ Many developer tools (like `npm`) are built using Node.js.
 
 - Uses **JavaScript everywhere** (frontend + backend)
 - ⚡ Very fast and efficient (thanks to Google’s **V8 engine**)
-- 📚 Huge library of tools via **npm** (Node Package Manager)
+- 📚 Huge library of tools via Node Package Manager
 - 🔄 Great at handling many users at once (asynchronous, non-blocking)
 
 ---
