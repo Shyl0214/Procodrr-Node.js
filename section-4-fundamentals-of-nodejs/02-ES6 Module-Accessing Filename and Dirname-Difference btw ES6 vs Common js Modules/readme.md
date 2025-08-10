@@ -537,4 +537,3 @@ const configPath = join(__dirname, 'config.json');
 
 ---
 
-*ES6 Modules represent the future of JavaScript modularity. While CommonJS is still widely used in Node.js, ES6 modules provide better tooling support, performance optimizations, and are the standard for modern JavaScript development.*
