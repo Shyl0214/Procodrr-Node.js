@@ -7,7 +7,7 @@ The fs module in Node.js allows you to work with files — reading, writing, del
 Node.js provides three main ways to read files:
 
 1. `readFileSync()` → Synchronous (Blocking)
-2. `readFile()` with a callback → Asynchronous (Non-blocking)
+2. `readFile()` with a call-back → Asynchronous (Non-blocking)
 3. `readFile()` with Promises → Asynchronous (Non-blocking, modern way)
 
 ### A. readFileSync() — Synchronous (Blocking)
@@ -43,12 +43,12 @@ const fileContent = fs.readFileSync("./index.html", "utf-8");
 console.log(fileContent);
 ```
 
-### B. readFile() with a Callback — Asynchronous (Non-blocking)
+### B. readFile() with a Call-back — Asynchronous (Non-blocking)
 
 - Runs in the background.
 - Doesn't block the main thread.
-- Uses a callback function to handle results.
-- Can lead to callback hell in complex scenarios.
+- Uses a call-back function to handle results.
+- Can lead to call-back hell in complex scenarios.
 
 **Example:**
 
@@ -174,7 +174,7 @@ Tick 5
 ## 4️⃣ Key Takeaways
 
 - `readFileSync` → Blocks main thread, returns a Buffer by default.
-- `readFile` (callback) → Non-blocking, uses callbacks, can get messy for big apps.
+- `readFile` (call-back) → Non-blocking, uses call-backs, can get messy for big apps.
 - `readFile` (Promises) → Non-blocking, works great with async/await, preferred way.
 - Always prefer asynchronous methods for better performance.
 
@@ -183,15 +183,15 @@ Tick 5
 | Method | Type | Blocks Thread | Error Handling | Modern Usage |
 |--------|------|---------------|----------------|--------------|
 | `readFileSync()` | Synchronous | ✅ Yes | try/catch | ❌ Not recommended |
-| `readFile()` + callback | Asynchronous | ❌ No | Callback parameter | ⚠️ Legacy |
+| `readFile()` + call-back | Asynchronous | ❌ No | Call-back parameter | ⚠️ Legacy |
 | `readFile()` + Promise | Asynchronous | ❌ No | try/catch or .catch() | ✅ Recommended |
 
 ## 🚀 Best Practices
 
 1. **Use async methods** - Always prefer asynchronous file operations
-2. **Handle errors properly** - Always check for errors in callbacks or use try/catch with promises
+2. **Handle errors properly** - Always check for errors in call-backs or use try/catch with promises
 3. **Specify encoding** - Use "utf-8" for text files to avoid Buffer conversion
-4. **Use fs/promises** - Modern Promise-based API is cleaner than callbacks
+4. **Use fs/promises** - Modern Promise-based API is cleaner than call-backs
 5. **Avoid sync in production** - Synchronous methods can block your entire application
 
 ## 🔧 Common File Operations
@@ -247,7 +247,7 @@ try {
 }
 ```
 
-### With Callbacks
+### With Call-backs
 
 ```javascript
 import fs from "node:fs";
